@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>RELATORIOS TECKMA</title>
+
+    <style>
+       
+        #todos {
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            
+            
+        }
+        #em_cima {
+            min-width: 110%;
+            height: 80px;
+            width: 110%;
+            background-color: #015941;
+            margin-left: -10px;
+            margin-top: -20px;
+            text-align: center;
+            color: white;
+            font-size: xx-large;
+            justify-content: center;
+        }
+        .menu{
+            display: block;
+        }
+        .menu1{
+            display: block;
+        }
+        .menu2{
+            display: none;
+            height: 100%;
+        }
+        .menu3{
+            display: none;
+        }
+        .btnMenu{
+            height: 90px;
+            width: 90px;
+            background-color: #015941;
+            margin-top: 10px;
+            border: 2px solid black;
+            color: aliceblue;
+            text-align: center;
+            
+            
+        }
+        .btnMenu1{
+            height: 90px;
+            width: 90px;
+            background-color: #015941;
+            margin-top: 10px;
+            border: 2px solid black;
+            color: aliceblue;
+            text-align: center;   
+            margin-left: 30px;         
+        }
+        .btnMenu2{
+            height: 45px;
+            width: 120px;
+            background-color: #015941;
+            margin-top: 10px;
+            border: 2px solid black;
+            color: aliceblue;
+            text-align: center;   
+            margin-left: 30px;  
+            border-radius: 10px;      
+        }
+        .btnMenu3{
+            height: 45px;
+            width: 120px;
+            background-color: #015941;
+            margin-top: 10px;
+            border: 2px solid black;
+            color: aliceblue;
+            text-align: center;   
+            margin-left: 30px;      
+            border-radius: 10px;   
+        }
+        #EMBRAER{
+            display: none;
+            
+        }
+        #MERCEDEZ{
+            display: none;
+        }
+        #voltar {
+            display: none;
+            height: 30px;
+            width: 120px;
+            background-color: #015941;
+            border: 1px solid black;
+            color: aliceblue;
+            text-align: center;   
+
+        }
+        #titulo {
+            font-family: Impact, fantasy;
+            margin-top: 18px;
+            font-size: 60px ;
+        }
+        #tela {
+            margin-left: 120px;
+            margin-top: 150px;
+            border: 8px solid black;
+            border-radius: 10px;
+        }
+        #logo {
+            position:absolute;
+            margin-left: 10px;
+            max-height: 70px;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body   style="background-color: #E5F2E8 ;background-size: cover;width:1200px;height: 550px;background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSiGg4yAxIHBOSBzL-gNAwzkWP2scRGNka8RKugTrNAbOrYrtxo_wSYmdo5R9IG_28qpZJmj16gf8I52xLC_DQN7QOzwOxPeWa0FVMfocbftHFrTeNSXnQsn8LQ_Rjh3gnA-6I-9ZWk8Ijbct-VZOs35lWkXIYWiaKfi3i_Zp29EgmEjUnocLzfqhOKS6X/s320/Design_sem_nome-removebg-preview.png') no-repeat center center;background-color: aliceblue;"> 
+    <img id="logo" src="https://www.teckma.com.br/2019/wp-content/uploads/2020/10/TKG-logo-3-.png">
+    <div id="em_cima">
+        <h2 id="titulo">LIGHTHOUSE</h2>
+    </div>
+   
+    
+    <div id="todos">
+        <div id="INICIAL" class="menu">
+            <div id="btnEmb" class="btnMenu" onclick="btn_menu('EMBRAER','MERCEDEZ','btnEmb')">Embraer</div>
+            <div id="btnMer" class="btnMenu" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer')">Mercedez</div>
+            <div id="btnOlan" class="btnMenu">Olan</div>
+        </div>
+        <div id="EMBRAER" >
+                <div class="menu1">
+                    <div id="btnEmbSeg" class="btnMenu1" onclick="btn_menu1_1('embSeguranca','menu2','btnEmbSeg')">Segurança</div>
+                    <div id="btnEmbMan" class="btnMenu1" onclick="btn_menu1_1('embManutencao','menu2','btnEmbMan')">Manutenção</div>
+                    <div id="btnEmbGes" class="btnMenu1" onclick="btn_menu1_1('embGente_e_Gestao','menu2','btnEmbGes')"> Gente e Gestão</div>
+                    <div id="btnEmbFin" class="btnMenu1">Financeiro</div>
+                    <div id="btnEmbSup" class="btnMenu1">Suprimentos</div>
+                </div>
+
+
+                <div id="embSeguranca" class="menu2">
+                    <!-- abrindo iframe da segurança -->
+                    <div id="btnEmbSeg_pbi" class="btnMenu2" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiOTAzMDk5OGYtZTU1Ny00ZjA5LTkxMmItOWFjMTBhNzgwNGRlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">KPI's Segurança</div>
+                </div>
+                <div id="embManutencao" class="menu2">
+                    <div id="btnEmbMan_Sla" class="btnMenu2">SLA</div>
+                    <div id="btnEmbManPrev" class="btnMenu2" onclick="btn_menu1_1('embManutencaoPreventivas','menu3','btnEmbManPrev')">Preventivas</div>
+                    <div id="btnEmbManCorr" class="btnMenu2" onclick="btn_menu1_1('embManutencaoCorretivas','menu3','btnEmbManCorr')">Corretivas</div>                
+                    <div id="btnEmbManOneP" class="btnMenu2" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiY2FiYTYzNmEtMjk4My00YjRhLTlkYWYtM2QxZTgxNDJmMTBlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9&pageName=ReportSectiona179b24c38ea714d200c')">One Page</div>
+                </div>
+                <div id="embGente_e_Gestao" class="menu2">
+                    <!-- abrindo iframe do treinamento -->
+                    <div id="btnEmbGesTrei" class="btnMenu2" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiMGFlOWMyY2YtMTlhZi00MjM3LWI2ZWMtYjkwZDVmZjhlYjQ1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">Treinamento</div>
+                </div>
+
+                <div id="embManutencaoPreventivas" class="menu3">
+
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">SJK</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiMTk0ODM0MzEtZWMxNy00NmNiLWFjNjYtZWY1YTZlYzQ2YzY5IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EDE</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiNDE0ZWY2YzUtNGE1MC00MmMyLWIyMWEtNTYxZmEwZTkwYTFkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">TTE</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiZjgyNGMxMGYtZWIyMi00ZDAzLWE2ZmQtNDM1YzNlOTBkYjFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">BOT</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EUG</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">GPX</div>
+                </div>   
+                <div id="embManutencaoCorretivas" class="menu3">
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">SJK</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiMTk0ODM0MzEtZWMxNy00NmNiLWFjNjYtZWY1YTZlYzQ2YzY5IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EDE</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiNDE0ZWY2YzUtNGE1MC00MmMyLWIyMWEtNTYxZmEwZTkwYTFkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">TTE</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiZjgyNGMxMGYtZWIyMi00ZDAzLWE2ZmQtNDM1YzNlOTBkYjFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">BOT</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EUG</div>
+                    <div class="btnMenu3" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">GPX</div>
+                </div>
+
+
+        </div>
+        <div id="MERCEDEZ">
+            <div class="menu1">
+                <div class="btnMenu1">Exemplo Mercedez</div>
+                <div class="btnMenu1">Exemplo Mercedez2</div>
+            </div>
+        </div>
+        <iframe id="tela"style="display: none" width="500" height="300" src="" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+
+    <script>
+
+        function btn_menu(mostrar,ocultar,botao){
+
+            let menuMercedez = document.getElementById(ocultar);
+            let menuEmbraer = document.getElementById(mostrar);
+            let tela = document.getElementById("tela").style.display="none";
+
+            for(let k=2;k<=3;k++)//comecando no menu 2 pra abrir corretamente o 1
+            {
+                let ocultarTudo = document.getElementsByClassName("menu"+k);
+                
+                for(let j = 0;j < ocultarTudo.length;j++){ocultarTudo[j].style.display="none";}
+                let corBase = document.getElementsByClassName("btnMenu"+(k-1));
+
+                for(let m = 0;m < corBase.length;m++){
+                    corBase[m].style.backgroundColor = "#015941";
+                    corBase[m].style.color = "aliceblue";
+                }
+            }
+            
+            let menuInicialB = document.getElementsByClassName("btnMenu");
+            for(let j = 0;j < menuInicialB.length;j++){
+                menuInicialB[j].style.color="aliceblue";
+                menuInicialB[j].style.backgroundColor="#015941";
+            }
+
+            let corCerta = document.getElementById(botao);
+            corCerta.style.backgroundColor = "aliceblue";
+            corCerta.style.color = "black";
+
+            menuMercedez.style.display= "none";
+
+            if(menuEmbraer.style.display === "none"){
+                menuEmbraer.style.display = "flex";
+            }else{
+                menuEmbraer.style.display = "none";
+            }
+            
+
+        }
+
+        function btn_menu1_1(mostrar,ocultar,botao){
+           let classeOcultar = document.getElementsByClassName(ocultar);
+           let itemMostrar = document.getElementById(mostrar);
+           let tela = document.getElementById("tela").style.display="none";
+    
+           let ocultarbracos = ocultar[4];
+           for(let k=ocultarbracos;k<=3;k++)
+           {
+                let ocultarTudo = document.getElementsByClassName("menu"+k);
+                
+                for(let j = 0;j < ocultarTudo.length;j++){ocultarTudo[j].style.display="none";}
+
+                //mudando cor
+                let corBase = document.getElementsByClassName("btnMenu"+(k-1));
+                for(let m = 0;m < corBase.length;m++){
+                    corBase[m].style.backgroundColor = "#015941";
+                    corBase[m].style.color = "aliceblue";
+                }
+                
+           }
+           
+           let corCerta = document.getElementById(botao);
+           corCerta.style.backgroundColor = "aliceblue";
+           corCerta.style.color = "black";
+
+
+           if(itemMostrar.style.display === "none"){
+                for(let i = 0;i < classeOcultar.length;i++){classeOcultar[i].style.display="none";}
+                itemMostrar.style.display = "block";
+                
+           }else{
+                for(let i = 0;i < classeOcultar.length;i++){classeOcultar[i].style.display="none";}               
+           }
+            
+        }
+
+        function abrirIframe(link){
+            //let tds = document.getElementById("todos").style.display = "none";
+            let tela = document.getElementById("tela");
+            //let voltar = document.getElementById("voltar").style.display="block";
+            tela.style.display = "block";
+            tela.src=link;
+        }
+
+    </script>
+</body>
+</html>
