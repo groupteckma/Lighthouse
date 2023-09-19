@@ -48,7 +48,7 @@
             border: 2px solid black;
             color: aliceblue;
             text-align: center;
-            
+            border-radius: 10px;     
             
         }
         .btnMenu1{
@@ -59,7 +59,8 @@
             border: 2px solid black;
             color: aliceblue;
             text-align: center;   
-            margin-left: 30px;         
+            margin-left: 30px;       
+            border-radius: 10px;  
         }
         .btnMenu2{
             height: 45px;
@@ -130,15 +131,15 @@
         <div id="INICIAL" class="menu0">
             <div id="btnEmb" class="btnMenu0" onclick="btn_menu('EMBRAER','MERCEDEZ','btnMer');btn_mudar_logo('btnEmb','EMBRAER')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
             <div id="btnMer" class="btnMenu0" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer');btn_mudar_logo('btnMer','MERCEDEZ')"style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
-            <div id="btnOlan" class="btnMenu0">Olan</div>
+            <div id="btnOlan" class="btnMenu0" style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;"></div>
         </div>
         <div id="EMBRAER" >
                 <div class="menu1">
-                    <div id="btnEmbSeg" class="btnMenu1" onclick="btn_menu1_1('embSeguranca','menu2','btnEmbSeg')" >Segurança</div>
-                    <div id="btnEmbMan" class="btnMenu1" onclick="btn_menu1_1('embManutencao','menu2','btnEmbMan')">Manutenção</div>
-                    <div id="btnEmbGes" class="btnMenu1" onclick="btn_menu1_1('embGente_e_Gestao','menu2','btnEmbGes')"> Gente e Gestão</div>
-                    <div id="btnEmbFin" class="btnMenu1">Financeiro</div>
-                    <div id="btnEmbSup" class="btnMenu1">Suprimentos</div>
+                    <div id="btnEmbSeg" class="btnMenu1" onclick="btn_menu1_1('embSeguranca','menu2','btnEmbSeg');btn_mudar_logo('btnEmbSeg','embSeguranca')" style="background-image: url('logo emb_seguranca.png');background-size: contain;background-repeat: no-repeat;" ></div>
+                    <div id="btnEmbMan" class="btnMenu1" onclick="btn_menu1_1('embManutencao','menu2','btnEmbMan');btn_mudar_logo('btnEmbMan','embManutencao')" style="background-image: url('logo emb_manutencao.png');background-size: contain;background-repeat: no-repeat;"></div>
+                    <div id="btnEmbGes" class="btnMenu1" onclick="btn_menu1_1('embGente_e_Gestao','menu2','btnEmbGes');btn_mudar_logo('btnEmbGes','embGente_e_Gestao')" style="background-image: url('logo emb_geg.png');background-size: contain;background-repeat: no-repeat;"></div>
+                    <div id="btnEmbFin" class="btnMenu1" style="background-image: url('logo emb_financeiro.png');background-size: contain;background-repeat: no-repeat;"></div>
+                    <div id="btnEmbSup" class="btnMenu1" style="background-image: url('logo emb_suprimentos.png');background-size: contain;background-repeat: no-repeat;"></div>
                 </div>
 
 
@@ -289,7 +290,7 @@
 
             let n = btn.className[7];
 
-            for(j=n;n<=3;n++){
+            for(j=n;j<=3;j++){
 
                 let btns = document.getElementsByClassName("btnMenu"+j);
                 for(i=0;i<btns.length;i++)
@@ -299,6 +300,7 @@
                         
                     }
                     btns[i].style.backgroundColor = "#015941";
+                    
                 }
 
             }
