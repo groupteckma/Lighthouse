@@ -9,7 +9,7 @@
        
         #todos {
             min-width: 100%;
-            width: 100%;
+            width: 108%;
             height: 100%;
             display: flex;
             
@@ -27,7 +27,7 @@
             font-size: xx-large;
             justify-content: center;
         }
-        .menu{
+        .menu0{
             display: block;
         }
         .menu1{
@@ -40,7 +40,7 @@
         .menu3{
             display: none;
         }
-        .btnMenu{
+        .btnMenu0{
             height: 90px;
             width: 90px;
             background-color: #015941;
@@ -127,14 +127,14 @@
    
     
     <div id="todos">
-        <div id="INICIAL" class="menu">
-            <div id="btnEmb" class="btnMenu" onclick="btn_menu('EMBRAER','MERCEDEZ','btnEmb')">Embraer</div>
-            <div id="btnMer" class="btnMenu" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer')">Mercedez</div>
-            <div id="btnOlan" class="btnMenu">Olan</div>
+        <div id="INICIAL" class="menu0">
+            <div id="btnEmb" class="btnMenu0" onclick="btn_menu('EMBRAER','MERCEDEZ','btnMer');btn_mudar_logo('btnEmb')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnMer" class="btnMenu0" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer');btn_mudar_logo('btnMer')"style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnOlan" class="btnMenu0">Olan</div>
         </div>
         <div id="EMBRAER" >
                 <div class="menu1">
-                    <div id="btnEmbSeg" class="btnMenu1" onclick="btn_menu1_1('embSeguranca','menu2','btnEmbSeg')">Segurança</div>
+                    <div id="btnEmbSeg" class="btnMenu1" onclick="btn_menu1_1('embSeguranca','menu2','btnEmbSeg')" >Segurança</div>
                     <div id="btnEmbMan" class="btnMenu1" onclick="btn_menu1_1('embManutencao','menu2','btnEmbMan')">Manutenção</div>
                     <div id="btnEmbGes" class="btnMenu1" onclick="btn_menu1_1('embGente_e_Gestao','menu2','btnEmbGes')"> Gente e Gestão</div>
                     <div id="btnEmbFin" class="btnMenu1">Financeiro</div>
@@ -271,6 +271,47 @@
             tela.style.display = "block";
             tela.src=link;
         }
+
+        
+        //-------novas funções
+        function btn_mudar_logo(botao){
+            let btn = document.getElementById(botao);//botão escolhido
+            
+            nomeImagem = btn.style.backgroundImage;
+            nomeImagem = nomeImagem.replace('url(','');
+            nomeImagem = nomeImagem.replace(')','');//configurando o link de fundo
+
+            if(nomeImagem.includes('alternativo')){//verificando existência de alternativo
+                nomeImagem = nomeImagem.replace(' alternativo','');
+            }else{
+                nomeImagem = nomeImagem.replace('.png',' alternativo.png');
+            }
+
+            let n = btn.className[7];
+
+            for(j=n;n<=3;n++){
+
+                let btns = document.getElementsByClassName("btnMenu"+j);
+                for(i=0;i<btns.length;i++)
+                {
+                    if(btns[i].style.backgroundImage.includes("alternativo")){
+                        btns[i].style.backgroundImage = btns[i].style.backgroundImage.replace(" alternativo","");
+                        
+                    }
+                    btns[i].style.backgroundColor = "#015941";
+                }
+
+            }
+
+
+            if(btn.style.backgroundImage != "url(" + nomeImagem + ")"){
+                btn.style.backgroundImage = "url(" + nomeImagem + ")"; //atribuindo o novo link conforme padrão de arquivos
+                btn.style.backgroundColor = "aliceblue";
+            }
+            
+        }
+        
+
 
     </script>
 </body>
