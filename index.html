@@ -128,8 +128,8 @@
     
     <div id="todos">
         <div id="INICIAL" class="menu0">
-            <div id="btnEmb" class="btnMenu0" onclick="btn_menu('EMBRAER','MERCEDEZ','btnMer');btn_mudar_logo('btnEmb')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
-            <div id="btnMer" class="btnMenu0" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer');btn_mudar_logo('btnMer')"style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnEmb" class="btnMenu0" onclick="btn_menu('EMBRAER','MERCEDEZ','btnMer');btn_mudar_logo('btnEmb','EMBRAER')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnMer" class="btnMenu0" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer');btn_mudar_logo('btnMer','MERCEDEZ')"style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
             <div id="btnOlan" class="btnMenu0">Olan</div>
         </div>
         <div id="EMBRAER" >
@@ -274,7 +274,7 @@
 
         
         //-------novas funções
-        function btn_mudar_logo(botao){
+        function btn_mudar_logo(botao,prox){
             let btn = document.getElementById(botao);//botão escolhido
             
             nomeImagem = btn.style.backgroundImage;
@@ -304,9 +304,13 @@
             }
 
 
-            if(btn.style.backgroundImage != "url(" + nomeImagem + ")"){
-                btn.style.backgroundImage = "url(" + nomeImagem + ")"; //atribuindo o novo link conforme padrão de arquivos
-                btn.style.backgroundColor = "aliceblue";
+            
+            btn.style.backgroundImage = "url(" + nomeImagem + ")"; //atribuindo o novo link conforme padrão de arquivos
+            btn.style.backgroundColor = "aliceblue";
+            
+            if(document.getElementById(prox).style.display === "none"){
+                btn.style.backgroundImage = "url(" + nomeImagem.replace(' alternativo','') + ")";
+                btn.style.backgroundColor = "#015941";
             }
             
         }
