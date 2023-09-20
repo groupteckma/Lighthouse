@@ -9,16 +9,18 @@
        
         #todos {
             min-width: 100%;
-            width: 108%;
+            width: 100%;
             height: 100%;
             display: flex;
             font-family: monospace;
+            margin-left: 10px;
+            margin-top: 10px;
             
         }
         #em_cima {
-            min-width: 110%;
+            min-width: 105%;
             height: 80px;
-            width: 110%;
+            width: 1300px;
             background-color: #015941;
             margin-left: -10px;
             margin-top: -20px;
@@ -26,6 +28,7 @@
             color: white;
             font-size: xx-large;
             justify-content: center;
+            
         }
         .menu0{
             display: block;
@@ -40,29 +43,17 @@
         .menu3{
             display: none;
         }
-        .btnMenu0{
+        .btnslogo{
             height: 90px;
             width: 90px;
             background-color: #015941;
-            margin-top: 10px;
-            border: 2px solid black;
-            color: aliceblue;
-            text-align: center;
-            border-radius: 10px;     
-            
-        }
-        .btnMenu1{
-            height: 90px;
-            width: 90px;
-            background-color: #015941;
-            margin-top: 10px;
             border: 2px solid black;
             color: aliceblue;
             text-align: center;   
             margin-left: 30px;       
-            border-radius: 10px;  
+           
         }
-        .btnMenu2{
+        .btnsret{
             height: 45px;
             width: 120px;
             background-color: #015941;
@@ -71,18 +62,7 @@
             color: aliceblue;
             text-align: center;   
             margin-left: 30px;  
-            border-radius: 10px;      
-        }
-        .btnMenu3{
-            height: 45px;
-            width: 120px;
-            background-color: #015941;
-            margin-top: 10px;
-            border: 2px solid black;
-            color: aliceblue;
-            text-align: center;   
-            margin-left: 30px;      
-            border-radius: 10px;   
+            border-radius: 10px;
         }
         #EMBRAER{
             display: none;
@@ -102,7 +82,7 @@
 
         }
         #titulo {
-            font-family: Impact, fantasy;
+            font-family: OCR A Std, monospace;
             margin-top: 18px;
             font-size: 60px ;
         }
@@ -119,9 +99,15 @@
             margin-top: 10px;
             background-size: contain;
         }
+        body {
+            margin-left: -5px;
+            
+        }
+        
+        
     </style>
 </head>
-<body   style="background-color: #E5F2E8 ;background-size: cover;width:1200px;height: 550px;background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSiGg4yAxIHBOSBzL-gNAwzkWP2scRGNka8RKugTrNAbOrYrtxo_wSYmdo5R9IG_28qpZJmj16gf8I52xLC_DQN7QOzwOxPeWa0FVMfocbftHFrTeNSXnQsn8LQ_Rjh3gnA-6I-9ZWk8Ijbct-VZOs35lWkXIYWiaKfi3i_Zp29EgmEjUnocLzfqhOKS6X/s320/Design_sem_nome-removebg-preview.png') no-repeat center center;background-color: aliceblue;"> 
+<body   style="background-color: #E5F2E8 ;background-size: contain;width:1200px;height: 600px;background: url('background_.png') no-repeat right center fixed;background-color: aliceblue;"> 
     <img id="logo" src="https://www.teckma.com.br/2019/wp-content/uploads/2020/10/TKG-logo-3-.png">
     <div id="em_cima">
         <h2 id="titulo">LIGHTHOUSE</h2>
@@ -129,60 +115,60 @@
    
     
     <div id="todos">
-        <div id="INICIAL" class="menu0">
-            <div id="btnEmb" class="btnMenu0" onclick="btn_menu('EMBRAER','MERCEDEZ','btnMer');btn_mudar_logo('btnEmb','EMBRAER')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
-            <div id="btnMer" class="btnMenu0" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer');btn_mudar_logo('btnMer','MERCEDEZ')"style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
-            <div id="btnOlan" class="btnMenu0" style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;"></div>
+        <div id="INICIAL" class="menu0 main">
+            <div id="btnEmb" class="btnMenu0 btnslogo" onclick="btn_menu('EMBRAER','MERCEDEZ','btnMer');btn_mudar_logo('btnEmb','EMBRAER')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnMer" class="btnMenu0 btnslogo" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer');btn_mudar_logo('btnMer','MERCEDEZ')"style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnOlan" class="btnMenu0 btnslogo" style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;"></div>
         </div>
         <div id="EMBRAER" >
-                <div class="menu1">
-                    <div id="btnEmbSeg" class="btnMenu1" onclick="btn_menu1_1('embSeguranca','menu2','btnEmbSeg');btn_mudar_logo('btnEmbSeg','embSeguranca')" style="background-image: url('logo emb_seguranca.png');background-size: contain;background-repeat: no-repeat;" ></div>
-                    <div id="btnEmbMan" class="btnMenu1" onclick="btn_menu1_1('embManutencao','menu2','btnEmbMan');btn_mudar_logo('btnEmbMan','embManutencao')" style="background-image: url('logo emb_manutencao.png');background-size: contain;background-repeat: no-repeat;"></div>
-                    <div id="btnEmbGes" class="btnMenu1" onclick="btn_menu1_1('embGente_e_Gestao','menu2','btnEmbGes');btn_mudar_logo('btnEmbGes','embGente_e_Gestao')" style="background-image: url('logo emb_geg.png');background-size: contain;background-repeat: no-repeat;"></div>
-                    <div id="btnEmbFin" class="btnMenu1" style="background-image: url('logo emb_financeiro.png');background-size: contain;background-repeat: no-repeat;"></div>
-                    <div id="btnEmbSup" class="btnMenu1" style="background-image: url('logo emb_suprimentos.png');background-size: contain;background-repeat: no-repeat;"></div>
+                <div class="menu1 main">
+                    <div id="btnEmbSeg" class="btnMenu1 btnslogo" onclick="btn_menu1_1('embSeguranca','menu2','btnEmbSeg');btn_mudar_logo('btnEmbSeg','embSeguranca')" style="background-image: url('logo emb_seguranca.png');background-size: contain;background-repeat: no-repeat;" ></div>
+                    <div id="btnEmbMan" class="btnMenu1 btnslogo" onclick="btn_menu1_1('embManutencao','menu2','btnEmbMan');btn_mudar_logo('btnEmbMan','embManutencao')" style="background-image: url('logo emb_manutencao.png');background-size: contain;background-repeat: no-repeat;"></div>
+                    <div id="btnEmbGes" class="btnMenu1 btnslogo" onclick="btn_menu1_1('embGente_e_Gestao','menu2','btnEmbGes');btn_mudar_logo('btnEmbGes','embGente_e_Gestao')" style="background-image: url('logo emb_geg.png');background-size: contain;background-repeat: no-repeat;"></div>
+                    <div id="btnEmbFin" class="btnMenu1 btnslogo" style="background-image: url('logo emb_financeiro.png');background-size: contain;background-repeat: no-repeat;"></div>
+                    <div id="btnEmbSup" class="btnMenu1 btnslogo" style="background-image: url('logo emb_suprimentos.png');background-size: contain;background-repeat: no-repeat;"></div>
                 </div>
 
 
-                <div id="embSeguranca" class="menu2">
+                <div id="embSeguranca" class="menu2 main">
                     <!-- abrindo iframe da segurança -->
-                    <div id="btnEmbSeg_pbi" class="btnMenu2" onclick="abrirIframe('btnEmbSeg_pbi','https://app.powerbi.com/view?r=eyJrIjoiOTAzMDk5OGYtZTU1Ny00ZjA5LTkxMmItOWFjMTBhNzgwNGRlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">KPI's Segurança</div>
+                    <div id="btnEmbSeg_pbi" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbSeg_pbi','https://app.powerbi.com/view?r=eyJrIjoiOTAzMDk5OGYtZTU1Ny00ZjA5LTkxMmItOWFjMTBhNzgwNGRlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">KPI's Segurança</div>
                 </div>
                 <div id="embManutencao" class="menu2">
-                    <div id="btnEmbMan_Sla" class="btnMenu2">SLA</div>
-                    <div id="btnEmbManPrev" class="btnMenu2" onclick="btn_menu1_1('embManutencaoPreventivas','menu3','btnEmbManPrev')">Preventivas</div>
-                    <div id="btnEmbManCorr" class="btnMenu2" onclick="btn_menu1_1('embManutencaoCorretivas','menu3','btnEmbManCorr')">Corretivas</div>                
-                    <div id="btnEmbManOneP" class="btnMenu2" onclick="abrirIframe('https://app.powerbi.com/view?r=eyJrIjoiY2FiYTYzNmEtMjk4My00YjRhLTlkYWYtM2QxZTgxNDJmMTBlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9&pageName=ReportSectiona179b24c38ea714d200c')">One Page</div>
+                    <div id="btnEmbMan_Sla" class="btnMenu2 btnsret">SLA</div>
+                    <div id="btnEmbManPrev" class="btnMenu2 btnsret" onclick="btn_menu1_1('embManutencaoPreventivas','menu3','btnEmbManPrev')">Preventivas</div>
+                    <div id="btnEmbManCorr" class="btnMenu2 btnsret" onclick="btn_menu1_1('embManutencaoCorretivas','menu3','btnEmbManCorr')">Corretivas</div>                
+                    <div id="btnEmbManOneP" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbManOneP','https://app.powerbi.com/view?r=eyJrIjoiY2FiYTYzNmEtMjk4My00YjRhLTlkYWYtM2QxZTgxNDJmMTBlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9&pageName=ReportSectiona179b24c38ea714d200c')">One Page</div>
                 </div>
-                <div id="embGente_e_Gestao" class="menu2">
+                <div id="embGente_e_Gestao" class="menu2 main">
                     <!-- abrindo iframe do treinamento -->
-                    <div id="btnEmbGesTrei" class="btnMenu2" onclick="abrirIframe('btnEmbGestTrei','https://app.powerbi.com/view?r=eyJrIjoiMGFlOWMyY2YtMTlhZi00MjM3LWI2ZWMtYjkwZDVmZjhlYjQ1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">Treinamento</div>
+                    <div id="btnEmbGesTrei" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbGesTrei','https://app.powerbi.com/view?r=eyJrIjoiMGFlOWMyY2YtMTlhZi00MjM3LWI2ZWMtYjkwZDVmZjhlYjQ1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">Treinamento</div>
                 </div>
 
-                <div id="embManutencaoPreventivas" class="menu3">
+                <div id="embManutencaoPreventivas" class="menu3 main">
 
-                    <div id="btnEmbManPrevSjk" class="btnMenu3" onclick="abrirIframe('btnEmbManPrevSjk','https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">SJK</div>
-                    <div id="btnEmbManPrevEde" class="btnMenu3" onclick="abrirIframe('btnEmbManPrevEde','https://app.powerbi.com/view?r=eyJrIjoiMTk0ODM0MzEtZWMxNy00NmNiLWFjNjYtZWY1YTZlYzQ2YzY5IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EDE</div>
-                    <div id="btnEmbManPrevTte" class="btnMenu3" onclick="abrirIframe('btnEmbManPrevTte','https://app.powerbi.com/view?r=eyJrIjoiNDE0ZWY2YzUtNGE1MC00MmMyLWIyMWEtNTYxZmEwZTkwYTFkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">TTE</div>
-                    <div id="btnEmbManPrevBot" class="btnMenu3" onclick="abrirIframe('btnEmbManPrevBot','https://app.powerbi.com/view?r=eyJrIjoiZjgyNGMxMGYtZWIyMi00ZDAzLWE2ZmQtNDM1YzNlOTBkYjFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">BOT</div>
-                    <div id="btnEmbManPrevEug" class="btnMenu3" onclick="abrirIframe('btnEmbManPrevEug','https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EUG</div>
-                    <div id="btnEmbManPrevGpx" class="btnMenu3" onclick="abrirIframe('btnEmbManPrevGpx','https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">GPX</div>
+                    <div id="btnEmbManPrevSjk" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManPrevSjk','https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">SJK</div>
+                    <div id="btnEmbManPrevEde" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManPrevEde','https://app.powerbi.com/view?r=eyJrIjoiMTk0ODM0MzEtZWMxNy00NmNiLWFjNjYtZWY1YTZlYzQ2YzY5IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EDE</div>
+                    <div id="btnEmbManPrevTte" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManPrevTte','https://app.powerbi.com/view?r=eyJrIjoiNDE0ZWY2YzUtNGE1MC00MmMyLWIyMWEtNTYxZmEwZTkwYTFkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">TTE</div>
+                    <div id="btnEmbManPrevBot" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManPrevBot','https://app.powerbi.com/view?r=eyJrIjoiZjgyNGMxMGYtZWIyMi00ZDAzLWE2ZmQtNDM1YzNlOTBkYjFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">BOT</div>
+                    <div id="btnEmbManPrevEug" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManPrevEug','https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EUG</div>
+                    <div id="btnEmbManPrevGpx" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManPrevGpx','https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">GPX</div>
                 </div>   
-                <div id="embManutencaoCorretivas" class="menu3">
-                    <div id="btnEmbManCorrSjk" class="btnMenu3" onclick="abrirIframe('btnEmbManCorrSjk','https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">SJK</div>
-                    <div id="btnEmbManCorrEde" class="btnMenu3" onclick="abrirIframe('btnEmbManCorrEde','https://app.powerbi.com/view?r=eyJrIjoiMTk0ODM0MzEtZWMxNy00NmNiLWFjNjYtZWY1YTZlYzQ2YzY5IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EDE</div>
-                    <div id="btnEmbManCorrTte" class="btnMenu3" onclick="abrirIframe('btnEmbManCorrTte','https://app.powerbi.com/view?r=eyJrIjoiNDE0ZWY2YzUtNGE1MC00MmMyLWIyMWEtNTYxZmEwZTkwYTFkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">TTE</div>
-                    <div id="btnEmbManCorrBot" class="btnMenu3" onclick="abrirIframe('btnEmbManCorrBot','https://app.powerbi.com/view?r=eyJrIjoiZjgyNGMxMGYtZWIyMi00ZDAzLWE2ZmQtNDM1YzNlOTBkYjFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">BOT</div>
-                    <div id="btnEmbManCorrEug" class="btnMenu3" onclick="abrirIframe('btnEmbManCorrEug','https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EUG</div>
-                    <div id="btnEmbManCorrGpx" class="btnMenu3" onclick="abrirIframe('btnEmbManCorrGpx','https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">GPX</div>
+                <div id="embManutencaoCorretivas" class="menu3 main">
+                    <div id="btnEmbManCorrSjk" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrSjk','https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">SJK</div>
+                    <div id="btnEmbManCorrEde" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrEde','https://app.powerbi.com/view?r=eyJrIjoiMTk0ODM0MzEtZWMxNy00NmNiLWFjNjYtZWY1YTZlYzQ2YzY5IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EDE</div>
+                    <div id="btnEmbManCorrTte" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrTte','https://app.powerbi.com/view?r=eyJrIjoiNDE0ZWY2YzUtNGE1MC00MmMyLWIyMWEtNTYxZmEwZTkwYTFkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">TTE</div>
+                    <div id="btnEmbManCorrBot" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrBot','https://app.powerbi.com/view?r=eyJrIjoiZjgyNGMxMGYtZWIyMi00ZDAzLWE2ZmQtNDM1YzNlOTBkYjFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">BOT</div>
+                    <div id="btnEmbManCorrEug" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrEug','https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EUG</div>
+                    <div id="btnEmbManCorrGpx" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrGpx','https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">GPX</div>
                 </div>
 
 
         </div>
         <div id="MERCEDEZ">
             <div class="menu1">
-                <div class="btnMenu1">Exemplo Mercedez</div>
-                <div class="btnMenu1">Exemplo Mercedez2</div>
+                <div class="btnMenu1 btnslogo">Exemplo Mercedez</div>
+                <div class="btnMenu1 btnslogo">Exemplo Mercedez2</div>
             </div>
         </div>
         <iframe id="tela"style="display: none" width="500" height="300" src="" frameborder="0" allowFullScreen="true"></iframe>
@@ -267,9 +253,10 @@
         }
 
         function abrirIframe(botao,link){
-           
+            
             let design = document.getElementById(botao);
-            let olds = document.getElementsByClassName(design.className);
+            let olds = document.getElementsByClassName(design.classList[0]);
+            ocultar_afrente(botao);
             for(i = 0; i < olds.length;i++){
                 olds[i].style.backgroundColor = "#015941";
                 olds[i].style.color = "aliceblue";
@@ -335,7 +322,26 @@
             
         }
         
+        function ocultar_afrente(botao){
+            let btn = document.getElementById(botao);
+            let classe = parseInt(btn.classList[0][7])+1;
 
+            for(let k=classe;k<=4;k++)
+           {
+                let ocultarTudo = document.getElementsByClassName("menu"+k);
+                
+                for(let j = 0;j < ocultarTudo.length;j++){ocultarTudo[j].style.display="none";}
+
+                //mudando cor
+                let corBase = document.getElementsByClassName("btnMenu"+(k-1));
+                for(let m = 0;m < corBase.length;m++){
+                    corBase[m].style.backgroundColor = "#015941";
+                    corBase[m].style.color = "aliceblue";
+                }
+                
+           }
+
+        }
 
     </script>
 </body>
