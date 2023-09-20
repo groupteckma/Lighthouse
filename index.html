@@ -6,7 +6,22 @@
     <title>RELATORIOS TECKMA</title>
 
     <style>
-       
+        body{
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        main{
+            flex: 1 0 auto;
+        }
+
+        footer{
+            position: static;
+            background-color: #2c5d88;
+            bottom: 0vh;
+            width: 100%;
+        } 
         #todos {
             min-width: 100%;
             width: 100%;
@@ -18,9 +33,9 @@
             
         }
         #em_cima {
-            min-width: 105%;
+            min-width: 110%;
             height: 80px;
-            width: 1300px;
+            width: 110%;
             background-color: #015941;
             margin-left: -10px;
             margin-top: -20px;
@@ -28,6 +43,7 @@
             color: white;
             font-size: xx-large;
             justify-content: center;
+            margin-right: 0;
             
         }
         .menu0{
@@ -47,22 +63,29 @@
             height: 90px;
             width: 90px;
             background-color: #015941;
-            border: 2px solid black;
+            border: 1px solid black;
             color: aliceblue;
             text-align: center;   
-            margin-left: 30px;       
+            margin-left: 30px;     
            
         }
         .btnsret{
             height: 45px;
-            width: 120px;
+            width: 140px;
             background-color: #015941;
             margin-top: 10px;
-            border: 2px solid black;
+            border: 1px solid black;
             color: aliceblue;
             text-align: center;   
-            margin-left: 30px;  
+            margin-left: 15px;  
+            margin-right: 15px;
             border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+
         }
         #EMBRAER{
             display: none;
@@ -87,7 +110,7 @@
             font-size: 60px ;
         }
         #tela {
-            margin-left: 120px;
+            margin-left: 80px;
             margin-top: 150px;
             border: 8px solid black;
             border-radius: 10px;
@@ -103,7 +126,9 @@
             margin-left: -5px;
             
         }
-        
+        .main {
+            height: 500px;
+        }
         
     </style>
 </head>
@@ -132,17 +157,17 @@
 
                 <div id="embSeguranca" class="menu2 main">
                     <!-- abrindo iframe da segurança -->
-                    <div id="btnEmbSeg_pbi" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbSeg_pbi','https://app.powerbi.com/view?r=eyJrIjoiOTAzMDk5OGYtZTU1Ny00ZjA5LTkxMmItOWFjMTBhNzgwNGRlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">KPI's Segurança</div>
+                    <div id="btnEmbSeg_pbi" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbSeg_pbi','https://app.powerbi.com/view?r=eyJrIjoiOTAzMDk5OGYtZTU1Ny00ZjA5LTkxMmItOWFjMTBhNzgwNGRlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">KPI'S SEGURANÇA</div>
                 </div>
                 <div id="embManutencao" class="menu2">
                     <div id="btnEmbMan_Sla" class="btnMenu2 btnsret">SLA</div>
-                    <div id="btnEmbManPrev" class="btnMenu2 btnsret" onclick="btn_menu1_1('embManutencaoPreventivas','menu3','btnEmbManPrev')">Preventivas</div>
-                    <div id="btnEmbManCorr" class="btnMenu2 btnsret" onclick="btn_menu1_1('embManutencaoCorretivas','menu3','btnEmbManCorr')">Corretivas</div>                
-                    <div id="btnEmbManOneP" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbManOneP','https://app.powerbi.com/view?r=eyJrIjoiY2FiYTYzNmEtMjk4My00YjRhLTlkYWYtM2QxZTgxNDJmMTBlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9&pageName=ReportSectiona179b24c38ea714d200c')">One Page</div>
+                    <div id="btnEmbManPrev" class="btnMenu2 btnsret" onclick="btn_menu1_1('embManutencaoPreventivas','menu3','btnEmbManPrev')">PREVENTIVAS</div>
+                    <div id="btnEmbManCorr" class="btnMenu2 btnsret" onclick="btn_menu1_1('embManutencaoCorretivas','menu3','btnEmbManCorr')">CORRETIVAS</div>                
+                    <div id="btnEmbManOneP" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbManOneP','https://app.powerbi.com/view?r=eyJrIjoiY2FiYTYzNmEtMjk4My00YjRhLTlkYWYtM2QxZTgxNDJmMTBlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9&pageName=ReportSectiona179b24c38ea714d200c')">ONE PAGE</div>
                 </div>
                 <div id="embGente_e_Gestao" class="menu2 main">
                     <!-- abrindo iframe do treinamento -->
-                    <div id="btnEmbGesTrei" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbGesTrei','https://app.powerbi.com/view?r=eyJrIjoiMGFlOWMyY2YtMTlhZi00MjM3LWI2ZWMtYjkwZDVmZjhlYjQ1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">Treinamento</div>
+                    <div id="btnEmbGesTrei" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbGesTrei','https://app.powerbi.com/view?r=eyJrIjoiMGFlOWMyY2YtMTlhZi00MjM3LWI2ZWMtYjkwZDVmZjhlYjQ1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">TREINAMENTO</div>
                 </div>
 
                 <div id="embManutencaoPreventivas" class="menu3 main">
