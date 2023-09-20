@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+#todos {
+    position: fixed;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: monospace;
+    margin-left: 10px;
+    margin-top: 90px;
+    
+}
+#em_cima {
+   
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: #015941;
+    /*margin-left: -10px;*/
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    justify-content: center;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    
+}
+.menu0{
+    display: block;
+}
+.menu1{
+    display: block;
+}
+.menu2{
+    display: none;
+    height: 100%;
+}
+.menu3{
+    display: none;
+}
+.btnslogo{
+    height: 90px;
+    width: 90px;
+    background-color: #015941;
+    border: 1px solid black;
+    color: aliceblue;
+    text-align: center;   
+    margin-left: 30px;     
+   
+}
+.btnsret{
+    height: 45px;
+    width: 140px;
+    background-color: #015941;
+    margin-top: 10px;
+    border: 1px solid black;
+    color: aliceblue;
+    text-align: center;   
+    margin-left: 15px;  
+    margin-right: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+#EMBRAER{
+    display: none;
+    
+}
+#MERCEDEZ{
+    display: none;
+}
+#voltar {
+    display: none;
+    height: 30px;
+    width: 120px;
+    background-color: #015941;
+    border: 1px solid black;
+    color: aliceblue;
+    text-align: center;   
+
+}
+#titulo {
+    font-family: OCR A Std, monospace;
+    margin-top: 0;
+    font-size: 60px ;
+}
+#tela {
+    margin-left: 80px;
+    margin-top: 150px;
+    border: 8px solid black;
+    border-radius: 10px;
+}
+#logo {
+    position:fixed;
+    margin-left: 10px;
+    max-height: 55px;
+    margin-top: 10px;
+    background-size: contain;
+}
+@media (max-width:1900px){
+    body{
+        background: url('background_.png') no-repeat right center fixed;
+    }
+}
+@media (min-width:1901px){
+    body{
+        background: url('4k.png') no-repeat right center fixed;
+        width: 4000px;
+
+    }
+}
+body {
+    margin-left: 0;
+    display: block;
+}
+.main {
+    height: 500px;
+}
+#torrecontrol {
+    position:fixed;
+    margin-left: 90%;
+    height:120px;
+    margin-top: 10px;
+    background-size: contain;
+}
