@@ -164,3 +164,92 @@ function ocultar_afrente(botao){
    }
 
 }
+
+/*iframes da tela inicial
+
+-> pq dois iframes?
+r: para evitar telas de carregamento
+
+->pq não varios iframes int?
+r: além de deixar mais pesado, incluiria ter q adicionar um iframe para cada nova tela
+
+
+*/
+let temporizador
+let index = 2
+function intercalarIframes(){
+    temporizador = setInterval(function(){tela_incial_iframes()},15000);
+}
+
+
+function tela_incial_iframes()
+{  
+   
+   
+   lista = ['https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiMTk0ODM0MzEtZWMxNy00NmNiLWFjNjYtZWY1YTZlYzQ2YzY5IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiYWRjYjg5NzUtMWY3Ny00NWE5LThiMTgtZmJkNDYzMDZlMDFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiNDE0ZWY2YzUtNGE1MC00MmMyLWIyMWEtNTYxZmEwZTkwYTFkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiZmYxMjg2ZTYtYzEzNi00NjM3LWJmMzktZmMyMThlODVlNzQ4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiZjgyNGMxMGYtZWIyMi00ZDAzLWE2ZmQtNDM1YzNlOTBkYjFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiMzk3NGJkNjYtZmQ4NC00MjJkLWE1YjEtZjNmYjE5ZDAxMmEwIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiMWI2MWNmMDQtMjAxYy00YmJkLTg0YjgtN2ZkMmE4ZWU5NGFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiMjJhM2Q1OGItZjMxMy00MGI0LThlMWYtNjViMmM3ODgwNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9'];
+    
+    slide1 = document.getElementById('slide1');
+    slide2 = document.getElementById('slide2');
+    if (index === lista.length){index = 0;}
+    if(slide1.style.display === "none"){
+        slide1.style.display = "block";
+        slide2.style.display = "none";
+        slide2.src = lista[index];
+
+    }else{
+        slide1.style.display = "none";
+        slide2.style.display = "block";
+        slide1.src = lista[index];
+    }
+    index ++;
+
+}
+
+function abrirTela(empresa){
+    
+    document.getElementById("telaInicial").style.display = "none";
+    document.getElementById(empresa).style.display = "flex";
+    temporizador = clearInterval(temporizador);
+
+
+    btn_menu('EMBRAER','MERCEDEZ','btnEmb');
+    btn_mudar_logo('btnEmb','EMBRAER');
+    
+    
+        
+}
+function voltar_ao_menu_incial(empresa){
+
+    document.getElementById(empresa).style.display = "none";
+    document.getElementById("telaInicial").style.display = "flex";
+
+    temporizador = setInterval(function(){tela_incial_iframes()},15000);
+
+    
+    if(document.getElementById("EMBRAER").style.display === "none")
+    {
+        btn_menu('EMBRAER','MERCEDEZ','btnEmb');
+        btn_mudar_logo('btnEmb','EMBRAER');
+        
+        
+        
+    }else{
+        btn_menu('EMBRAER','MERCEDEZ','btnEmb');
+        btn_mudar_logo('btnEmb','EMBRAER');
+        btn_menu('EMBRAER','MERCEDEZ','btnEmb');
+        btn_mudar_logo('btnEmb','EMBRAER');
+    }
+
+    
+}

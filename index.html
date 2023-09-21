@@ -7,17 +7,23 @@
 
     <link rel="stylesheet" type="text/css" href="estiloDesktop.css" media="screen"/>
 </head>
-<body   style="background-color: #E5F2E8 ;background-size: cover;width:100%;height: 100%;background-color: aliceblue;"> 
+<body  onload="intercalarIframes()" style="background-color: #E5F2E8 ;background-size: cover;width:100%;height: 100%;background-color: aliceblue;"> 
     <div id="em_cima">
         <h2 id="titulo">LIGHTHOUSE</h2>
     </div>
     <img id="logo" src="https://www.teckma.com.br/2019/wp-content/uploads/2020/10/TKG-logo-3-.png">
     <img id="torrecontrol" src="imagetorrecontrol.png">
-   
+    <img id="btnVoltar" src="btnVoltar.png" onclick="voltar_ao_menu('tksScreen')">
     
-    <div id="todos">
+    <div id="tksScreen">
+        
         <div id="INICIAL" class="menu0 main">
-            <div id="btnEmb" class="btnMenu0 btnslogo" onclick="btn_menu('EMBRAER','MERCEDEZ','btnMer');btn_mudar_logo('btnEmb','EMBRAER')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
+            
+            <div id="VOLTAR" class="btnMenu0 btnslogo" onclick="voltar_ao_menu_incial('tksScreen')" >
+                <img id="imgBtnVolta"src="btnVoltar.png">
+                <div >VOLTAR</div>
+            </div>
+            <div id="btnEmb" class="btnMenu0 btnslogo" onclick="btn_menu('EMBRAER','MERCEDEZ','btnEmb');btn_mudar_logo('btnEmb','EMBRAER')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
             <div id="btnMer" class="btnMenu0 btnslogo" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer');btn_mudar_logo('btnMer','MERCEDEZ')"style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
             <div id="btnOlan" class="btnMenu0 btnslogo" style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;"></div>
         </div>
@@ -74,6 +80,18 @@
         </div>
         <iframe id="tela"style="display: none" width="500" height="300" src="" frameborder="0" allowFullScreen="true"></iframe>
     </div>
+    <div id="telaInicial">
+        <div id="MenuBotoesIniciais">
+            <div id="bt1" class="botoesIniciais" onclick="abrirTela('tksScreen')" style="background-image: url('tksShadow.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div class="botoesIniciais" style="background-image: url('tkeShadow.png');background-size: contain;background-repeat: no-repeat;"></div>
+        </div>
+        <!--varios iframes - teste se vai pesar muito - -->
+        <iframe id="slide1" class="slide" style="display: block;" src="https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe id="slide2" class="slide" style="display: none;" src="https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0" allowFullScreen="true"></iframe>
+        
+    
+    </div>
+
 
     <script type="text/javascript" src="comandos.js"></script>
 </body>
