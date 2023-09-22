@@ -1,8 +1,10 @@
-function btn_menu(mostrar,ocultar,botao){
+function btn_menu(mostrar,ocultar,ocultar2,botao){
 
     let menuMercedez = document.getElementById(ocultar);
+    let menuOlan = document.getElementById(ocultar2);
     let menuEmbraer = document.getElementById(mostrar);
     let tela = document.getElementById("tela").style.display="none";
+    let imagem = document.getElementById('imgsDinamicas').style.display="none";
 
     for(let k=2;k<=4;k++)//comecando no menu 2 pra abrir corretamente o 1
     {
@@ -28,6 +30,7 @@ function btn_menu(mostrar,ocultar,botao){
     corCerta.style.color = "black";
 
     menuMercedez.style.display= "none";
+    menuOlan.style.display= "none";
 
     if(menuEmbraer.style.display === "none"){
         menuEmbraer.style.display = "flex";
@@ -42,6 +45,8 @@ function btn_menu1_1(mostrar,ocultar,botao){
    let classeOcultar = document.getElementsByClassName(ocultar);
    let itemMostrar = document.getElementById(mostrar);
    let tela = document.getElementById("tela").style.display="none";
+   let imagem = document.getElementById('imgsDinamicas').style.display="none";
+
 
    let ocultarbracos = ocultar[4];
    for(let k=ocultarbracos;k<=4;k++)
@@ -184,7 +189,7 @@ function intercalarIframes(){
 
 function tela_incial_iframes()
 {  
-   
+    
    
    lista = ['https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
 'https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
@@ -199,22 +204,34 @@ function tela_incial_iframes()
 'https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
 'https://app.powerbi.com/view?r=eyJrIjoiMjJhM2Q1OGItZjMxMy00MGI0LThlMWYtNjViMmM3ODgwNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9'];
     
-    slide1 = document.getElementById('slide1');
-    slide2 = document.getElementById('slide2');
-    if (index === lista.length){index = 0;}
-    if(slide1.style.display === "none"){
-        slide1.style.display = "block";
-        slide2.style.display = "none";
-        slide2.src = lista[index];
 
-    }else{
-        slide1.style.display = "none";
-        slide2.style.display = "block";
-        slide1.src = lista[index];
-    }
+   
+        slide1 = document.getElementById('slide1');
+        slide2 = document.getElementById('slide2');
+        if (index === lista.length){index = 0;}
+        if(slide1.style.display === "none"){
+            slide1.style.display = "block";
+            slide2.style.display = "none";
+            slide2.src = lista[index];
+    
+        }else{
+            slide1.style.display = "none";
+            slide2.style.display = "block";
+            slide1.src = lista[index];
+        }
+
+    
+    
     index ++;
 
 }
+document.onkeydown = function(e) {
+
+    if(e.key === 'Escape') {
+        document.getElementById('slide3').style.display = "none";
+    }
+  
+  }
 
 function abrirTela(empresa){
     
@@ -223,7 +240,7 @@ function abrirTela(empresa){
     temporizador = clearInterval(temporizador);
 
 
-    btn_menu('EMBRAER','MERCEDEZ','btnEmb');
+    btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
     btn_mudar_logo('btnEmb','EMBRAER');
     
     
@@ -239,17 +256,146 @@ function voltar_ao_menu_incial(empresa){
     
     if(document.getElementById("EMBRAER").style.display === "none")
     {
-        btn_menu('EMBRAER','MERCEDEZ','btnEmb');
+        btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
         btn_mudar_logo('btnEmb','EMBRAER');
         
         
         
     }else{
-        btn_menu('EMBRAER','MERCEDEZ','btnEmb');
+        btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
         btn_mudar_logo('btnEmb','EMBRAER');
-        btn_menu('EMBRAER','MERCEDEZ','btnEmb');
+        btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
         btn_mudar_logo('btnEmb','EMBRAER');
     }
 
     
 }
+function abrir_imagem(botao,qtd,link,link2){
+    let imgs = document.getElementById('imgsDinamicas')
+    imgs.style.display = "block";
+    
+    let imagem1 = document.getElementById('imagemDinamica1');
+    let imagem2 = document.getElementById('imagemDinamica2');
+
+    let imagens = document.getElementsByClassName('imagemDinamica');
+
+    imagem1.style.display = "none";
+    imagem2.style.display = "none";
+
+    if(qtd === 1){
+        
+        imgs.style.marginLeft = "50%";
+        imgs.style.marginTop =  "20%";
+        imgs.style.maxWidth = "45%";
+        imgs.style.height = "60%";
+        
+        imagem1.src=link;
+        imagem1.style.display = "block"; 
+        imagem1.style.marginLeft = "0%";
+        imagem1.style.margintTop = "0%";
+        imagem1.style.maxWidth = "100%";
+        imagem1.style.height = "90%";
+
+        
+    }else{
+        imgs.style.marginLeft = "50%";
+        imgs.style.marginTop =  "10%";
+        imgs.style.maxWidth = "55%";
+        imgs.style.height = "85%";
+        
+        imagem1.src=link;
+        imagem2.src=link2;
+        
+        imagem1.style.display = "block"; 
+        imagem1.style.marginLeft = "0%";
+        imagem1.style.margintTop = "0%";
+        imagem1.style.maxWidth = "100%";
+        imagem1.style.height = "50%";
+
+        imagem2.style.display = "block"; 
+        imagem2.style.marginLeft = "0%";
+        imagem2.style.margintTop = "0%";
+        imagem2.style.maxWidth = "100%";
+        imagem2.style.height = "50%";
+       
+        
+    }
+    let design = document.getElementById(botao);
+    let olds = document.getElementsByClassName(design.classList[0]);
+    ocultar_afrente(botao);
+    for(i = 0; i < olds.length;i++){
+        olds[i].style.backgroundColor = "#015941";
+        olds[i].style.color = "aliceblue";
+    }
+    design.style.backgroundColor = "aliceblue";
+    design.style.color = "black";
+    
+}
+
+
+function tela_cheia(item_){
+    let elemento = document.getElementById(item_);
+    if (elemento.requestFullScreen) {
+        elemento.requestFullScreen();
+      } else if (elemento.webkitRequestFullScreen) {
+        elemento.webkitRequestFullScreen();
+      } else if (elemento.mozRequestFullScreen) {
+        elemento.mozRequestFullScreen();
+      } else {
+        console.log("O navegador não suporta a tela cheia");
+      }
+      
+}
+function tela_cheia_slide(){
+    document.getElementById('MenuBotoesIniciais').style.display="none";
+    document.getElementById('sumiu').style.display = "none";
+    let tela = document.getElementById('telaInicial');
+    slide1 = document.getElementById('slide1');
+    slide2 = document.getElementById('slide2');
+    
+
+    slide1.style.height = "100%";
+    slide2.style.height = "100%";
+    slide1.style.width = "100%";
+    slide2.style.width = "100%";
+    slide1.style.margin = "0%";
+    slide2.style.margin = "0%";
+    
+    tela.style.width = "100%";
+    tela.style.height = "100%";
+    tela.style.margin = "0%";
+    
+
+    
+}
+document.onkeydown = function(e) {
+
+    if(e.key === 'Escape') {
+        document.getElementById('MenuBotoesIniciais').style.display="block";
+        let tela = document.getElementById('telaInicial');
+        slide1 = document.getElementById('slide1');
+        slide2 = document.getElementById('slide2');
+        document.getElementById('sumiu').style.display = "flex";
+
+        slide1.style.height = "65%";
+        slide2.style.height = "65%";
+        slide1.style.width = "65%";
+        slide2.style.width = "65%";
+        slide1.style.marginLeft = "5%";
+        slide2.style.marginLeft = "5%";
+    
+    //tela.style.width = "100%";
+    //tela.style.height = "100%";
+    tela.style.marginTop = "12%";
+    }
+  
+  }
+/*
+.slide{
+    margin-left: 5%;
+    height: 65%;
+    width: 65%;
+    border: 2px black solid;
+    border-radius: 10px;
+
+}*/

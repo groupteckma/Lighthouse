@@ -23,9 +23,9 @@
                 <img id="imgBtnVolta"src="btnVoltar.png">
                 <div >VOLTAR</div>
             </div>
-            <div id="btnEmb" class="btnMenu0 btnslogo" onclick="btn_menu('EMBRAER','MERCEDEZ','btnEmb');btn_mudar_logo('btnEmb','EMBRAER')"style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
-            <div id="btnMer" class="btnMenu0 btnslogo" onclick="btn_menu('MERCEDEZ','EMBRAER','btnMer');btn_mudar_logo('btnMer','MERCEDEZ')"style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
-            <div id="btnOlan" class="btnMenu0 btnslogo" style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnEmb" class="btnMenu0 btnslogo" onclick="btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');btn_mudar_logo('btnEmb','EMBRAER')" style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnMer" class="btnMenu0 btnslogo" onclick="btn_menu('MERCEDEZ','EMBRAER','OLAM','btnMer');btn_mudar_logo('btnMer','MERCEDEZ')" style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnOlan" class="btnMenu0 btnslogo" onclick="btn_menu('OLAM','EMBRAER','MERCEDEZ','btnOlan');btn_mudar_logo('btnOlan','OLAN')" style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
         </div>
         <div id="EMBRAER" >
                 <div class="menu1 main">
@@ -33,7 +33,7 @@
                     <div id="btnEmbMan" class="btnMenu1 btnslogo" onclick="btn_menu1_1('embManutencao','menu2','btnEmbMan');btn_mudar_logo('btnEmbMan','embManutencao')" style="background-image: url('logo emb_manutencao.png');background-size: contain;background-repeat: no-repeat;"></div>
                     <div id="btnEmbGes" class="btnMenu1 btnslogo" onclick="btn_menu1_1('embGente_e_Gestao','menu2','btnEmbGes');btn_mudar_logo('btnEmbGes','embGente_e_Gestao')" style="background-image: url('logo emb_geg.png');background-size: contain;background-repeat: no-repeat;"></div>
                     <div id="btnEmbFin" class="btnMenu1 btnslogo" style="background-image: url('logo emb_financeiro.png');background-size: contain;background-repeat: no-repeat;"></div>
-                    <div id="btnEmbSup" class="btnMenu1 btnslogo" style="background-image: url('logo emb_suprimentos.png');background-size: contain;background-repeat: no-repeat;"></div>
+                    <div id="btnEmbEsg" class="btnMenu1 btnslogo" onclick="btn_menu1_1('embESG','menu2','btnEmbEsg');btn_mudar_logo('btnEmbEsg','embESG')" style="background-image: url('logo esg.png');background-size: contain;background-position: center;background-repeat: no-repeat;"></div>
                 </div>
 
 
@@ -51,7 +51,13 @@
                     <!-- abrindo iframe do treinamento -->
                     <div id="btnEmbGesTrei" class="btnMenu2 btnsret" onclick="abrirIframe('btnEmbGesTrei','https://app.powerbi.com/view?r=eyJrIjoiMGFlOWMyY2YtMTlhZi00MjM3LWI2ZWMtYjkwZDVmZjhlYjQ1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">TREINAMENTO</div>
                 </div>
-
+                <div id="embESG" class="menu2 main2">
+                    <div id="btnEmbGesEsg" class="btnMenu2 btnsret" onclick="abrir_imagem('btnEmbGesEsg',1,'PAINEL ESG-EMBRAER KPI.jpg','PAINEL ESG-EMBRAER KPI.jpg')" >KPI'S ESG</div>
+                    <div id="embEsgE" class="btnMenu2 btnsret" onclick="abrir_imagem('embEsgE',1,'PAINEL ESG-EMBRAER E.jpg','PAINEL ESG-EMBRAER E.jpg')">ENVIRONMETAL</div>
+                    <div id="embEsgS" class="btnMenu2 btnsret" onclick="abrir_imagem('embEsgS',2,'PAINEL ESG-EMBRAER S1.jpg','PAINEL ESG-EMBRAER S2.jpg')">SOCIAL</div>
+                    <div id="embEsgG" class="btnMenu2 btnsret" onclick="abrir_imagem('embEsgG',1,'PAINEL ESG-EMBRAER G.jpg','PAINEL ESG-EMBRAER G.jpg')">GOVERNANCE</div>
+                </div>
+                
                 <div id="embManutencaoPreventivas" class="menu3 main2">
 
                     <div id="btnEmbManPrevSjk" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManPrevSjk','https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">SJK</div>
@@ -68,8 +74,7 @@
                     <div id="btnEmbManCorrBot" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrBot','https://app.powerbi.com/view?r=eyJrIjoiZjgyNGMxMGYtZWIyMi00ZDAzLWE2ZmQtNDM1YzNlOTBkYjFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">BOT</div>
                     <div id="btnEmbManCorrEug" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrEug','https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">EUG</div>
                     <div id="btnEmbManCorrGpx" class="btnMenu3 btnsret" onclick="abrirIframe('btnEmbManCorrGpx','https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9')">GPX</div>
-                </div>
-
+                </div>               
 
         </div>
         <div id="MERCEDEZ">
@@ -78,17 +83,29 @@
                 <div class="btnMenu1 btnslogo">Exemplo Mercedez2</div>
             </div>
         </div>
-        <iframe id="tela"style="display: none" width="45%" height="52%" src="" frameborder="0" allowFullScreen="true"></iframe>
+        <div id="OLAM">
+            <div class="menu1 main">
+                <div class="btnMenu1 btnslogo">Exemplo OLAM</div>
+                <div class="btnMenu1 btnslogo">Exemplo OLAM2</div>
+            </div>
+        </div>
+        
     </div>
+    <div id="imgsDinamicas">
+        <img id="imagemDinamica1" ondblclick="tela_cheia('imagemDinamica1')" class = "imagemDinamica" src="imagetorrecontrol.png" >
+        <img id="imagemDinamica2" ondblclick="tela_cheia('imagemDinamica2')" class = "imagemDinamica" src="imagetorrecontrol.png" >
+    </div>
+    <iframe id="tela"style="display: none" width="45%" height="52%" src="" frameborder="0" allowFullScreen="true"></iframe>
     <div id="telaInicial">
         <div id="MenuBotoesIniciais">
             <div id="bt1" class="botoesIniciais" onclick="abrirTela('tksScreen')" style="background-image: url('tksShadow.png');background-size: contain;background-repeat: no-repeat;"></div>
             <div class="botoesIniciais" style="background-image: url('tkeShadow.png');background-size: contain;background-repeat: no-repeat;"></div>
         </div>
         <!--varios iframes - teste se vai pesar muito - -->
-        <iframe id="slide1" class="slide" style="display: block;" src="https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0" allowFullScreen="true"></iframe>
-        <iframe id="slide2" class="slide" style="display: none;" src="https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0" allowFullScreen="true"></iframe>
-        
+        <iframe id="slide1" class="slide" style="display: block;"  src="https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0"></iframe>
+        <iframe id="slide2" class="slide" style="display: none;"  src="https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0"></iframe>
+        <iframe id="slide3" class="slide" style="display: none;"  src="https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0"></iframe>
+        <div id="sumiu" class="btnslogo" style="background-image: url(telaCheia.png);background-size: contain;background-repeat: no-repeat;max-width: 5%;margin-left: 1%;max-height: 8%;background-position: center;"  onclick="tela_cheia_slide()"></div>
     
     </div>
 
