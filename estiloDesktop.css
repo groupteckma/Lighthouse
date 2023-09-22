@@ -11,11 +11,20 @@
     border-radius: 10px;
 
 }
+.main{
+    width: 9%;
+    margin-left: 2%;
+}
+.main2{
+    width: 12%;
+    margin-left: 2%;
+    height: 80%;
+}
 #telaInicial{
     position: fixed;
     display: flex;
     margin-top: 12%;
-    margin-left: 5%;
+    /*margin-left: 5%;*/
     width: 100%;
     height: 100%;
 }
@@ -24,6 +33,7 @@
     display: block;
     height: 100%;
     width: 18%;
+
 }
 .botoesIniciais {
     display: fixed;
@@ -45,7 +55,7 @@
 }
 #em_cima {
    
-    height: 80px;
+    height: 13%;
     width: 100%;
     position: fixed;
     background-color: #015941;
@@ -60,8 +70,10 @@
     align-items: center;
     
 }
+
 .menu0{
     display: block;
+    
 }
 .menu1{
     display: block;
@@ -74,39 +86,42 @@
     display: none;
 }
 .btnslogo{
-    height: 90px;
-    width: 90px;
+    height: 18%;
+    width: 100%;
     background-color: #015941;
     border: 1px solid black;
     color: aliceblue;
     text-align: center;   
-    margin-left: 30px;     
+    /*margin-left: 30px;*/
    
 }
 .btnsret{
-    height: 45px;
-    width: 140px;
+    height: 8%;
+    width: 100%;
     background-color: #015941;
-    margin-top: 10px;
+    margin-top: 13%;
     border: 1px solid black;
     color: aliceblue;
     text-align: center;   
-    margin-left: 15px;  
-    margin-right: 15px;
+    /*margin-left: 15%; */
+    /*margin-right: 2%;*/
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 80%;
 
 }
 #EMBRAER{
     display: none;
+    width: 100%;
     
 }
 #MERCEDEZ{
     display: none;
+    width: 100%;
+
 }
 #voltar {
     display: none;
@@ -121,18 +136,19 @@
 #titulo {
     font-family: OCR A Std, monospace;
     margin-top: 0;
-    font-size: 60px ;
+    max-height: 80%;
 }
 #tela {
-    margin-left: 80px;
-    margin-top: 150px;
+    position: fixed;
+    margin-left: 50%;
+    margin-top: 11%;
     border: 8px solid black;
     border-radius: 10px;
 }
 #logo {
     position:fixed;
-    margin-left: 10px;
-    max-height: 55px;
+    margin-left: 1%;
+    max-height: 9%;
     margin-top: 10px;
     background-size: contain;
 }
@@ -154,7 +170,7 @@ body {
     display: block;
 }
 .main {
-    height: 500px;
+    height: 80%;
 }
 #torrecontrol {
     position:fixed;
