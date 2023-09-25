@@ -202,8 +202,14 @@ function tela_incial_iframes()
 'https://app.powerbi.com/view?r=eyJrIjoiMmNkZTVmOGItYzhlNS00ZWViLWI1OGItYWZiOGNjM2RiNTlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
 'https://app.powerbi.com/view?r=eyJrIjoiMWI2MWNmMDQtMjAxYy00YmJkLTg0YjgtN2ZkMmE4ZWU5NGFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
 'https://app.powerbi.com/view?r=eyJrIjoiOThjZDZlNTUtM2Q4NS00ZmEyLTgxYjktYzdjN2NhMjU3M2VlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
-'https://app.powerbi.com/view?r=eyJrIjoiMjJhM2Q1OGItZjMxMy00MGI0LThlMWYtNjViMmM3ODgwNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9'];
-    
+'https://app.powerbi.com/view?r=eyJrIjoiMjJhM2Q1OGItZjMxMy00MGI0LThlMWYtNjViMmM3ODgwNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiZGVmN2JjMmYtMTFhZi00ZmUxLWFkOWQtMzBlYWM4ZTg4OWFmIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiZTdmMGJiZWYtNWRkOC00MDE5LTlmYzEtMzQxYTUwYTZkNmZlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiNWRlMDkwYzQtM2JjNi00YWJiLWE4YjgtMTk3MDY0N2NhZjdmIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiNmQ0MGQxMmYtMDMzZC00MzYxLWEyZTgtNDNkYjUzMGQxZDgxIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiMGFlOWMyY2YtMTlhZi00MjM3LWI2ZWMtYjkwZDVmZjhlYjQ1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiOTAzMDk5OGYtZTU1Ny00ZjA5LTkxMmItOWFjMTBhNzgwNGRlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9',
+'https://app.powerbi.com/view?r=eyJrIjoiY2FiYTYzNmEtMjk4My00YjRhLTlkYWYtM2QxZTgxNDJmMTBlIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9&pageName=ReportSectiona179b24c38ea714d200c']
 
    
         slide1 = document.getElementById('slide1');
