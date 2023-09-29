@@ -273,6 +273,7 @@ function voltar_ao_menu_incial(empresa){
         btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
         btn_mudar_logo('btnEmb','EMBRAER');
     }
+    //window.location.reload(true) //temporario
 
     
 }
@@ -390,18 +391,7 @@ document.onkeydown = function(e) {
         slide1.style.marginLeft = "5%";
         slide2.style.marginLeft = "5%";
     
-    //tela.style.width = "100%";
-    //tela.style.height = "100%";
     tela.style.marginTop = "12%";
     }
   
   }
-/*
-.slide{
-    margin-left: 5%;
-    height: 65%;
-    width: 65%;
-    border: 2px black solid;
-    border-radius: 10px;
-
-}*/
