@@ -159,13 +159,13 @@
 }
 @media (max-width:1900px){
     body{
-        background: url('imgback2.jpg') no-repeat right center fixed;
+        background: url('backimg4.jpg') no-repeat right center fixed;
         width: 1900px;
     }
 }
 @media (min-width:1901px){
     body{
-        background: url('imgback2.jpg') no-repeat right center fixed;
+        background: url('backimg4.jpg') no-repeat right center fixed;
         width: 4000px;
 
     }
