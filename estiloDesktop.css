@@ -142,6 +142,7 @@
     font-family: OCR A Std, monospace;
     margin-top: 0;
     max-height: 80%;
+    display: none;
 }
 #tela {
     position: fixed;
@@ -180,8 +181,8 @@ body {
 #torrecontrol {
     position:fixed;
     margin-left: 90%;
-    height:19%;
-    margin-top: 1%;
+    height:13%;
+    /*margin-top: 1%;*/
     background-size: contain;
 }
 
