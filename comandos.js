@@ -245,34 +245,47 @@ function abrirTela(empresa){
     document.getElementById(empresa).style.display = "flex";
     temporizador = clearInterval(temporizador);
 
-
-    btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
-    btn_mudar_logo('btnEmb','EMBRAER');
-    
-    
-        
 }
 function voltar_ao_menu_incial(empresa){
 
-    document.getElementById(empresa).style.display = "none";
-    document.getElementById("telaInicial").style.display = "flex";
+    
+    
 
     temporizador = setInterval(function(){tela_incial_iframes()},15000);
 
     
     if(document.getElementById("EMBRAER").style.display === "none")
     {
-        btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
-        btn_mudar_logo('btnEmb','EMBRAER');
+        //btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
+        //btn_mudar_logo('btnEmb','EMBRAER');
         
         
         
     }else{
         btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
         btn_mudar_logo('btnEmb','EMBRAER');
-        btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
-        btn_mudar_logo('btnEmb','EMBRAER');
+        //btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');
+        //btn_mudar_logo('btnEmb','EMBRAER');
+
     }
+    //btn_menu1_1('EsgEmb','menu2','btnEsgEmb');btn_mudar_logo('btnEsgEmb','EsgEmb')
+    
+    if(document.getElementById("esgESG").style.display === "none")
+    {
+        //btn_menu('esgESG','MERCEDEZ','OLAM','btnEsg');
+        //btn_mudar_logo('btnEsg','EMBRAER');
+        
+        
+        
+    }else{
+        btn_menu('esgESG','MERCEDEZ','OLAM','btnEsg');
+        btn_mudar_logo('btnEsg','EMBRAER');
+        //btn_menu('esgESG','MERCEDEZ','OLAM','btnEsg');
+        //btn_mudar_logo('btnEsg','EMBRAER');
+    }
+    document.getElementById(empresa).style.display = "none";
+    document.getElementById("telaInicial").style.display = "flex";
+
     //window.location.reload(true) //temporario
 
     

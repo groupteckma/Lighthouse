@@ -107,18 +107,31 @@
         
         <div class="menu0 main">
             
-            <div class="btnMenu0 btnslogo btnsVoltar" onclick="voltar_ao_menu_incial('tksScreen')" >
+            <div class="btnMenu0 btnslogo btnsVoltar" onclick="voltar_ao_menu_incial('tkaScreen')" >
                 <img class="imgBtnVolta"src="btnVoltar.png">
                 <div >VOLTAR</div>
-                <div id="btnEsgtka" class="btnMenu0 btnslogo" onclick="btn_menu('esgESG','MERCEDEZ','OLAM','btnEsgtka');btn_mudar_logo('btnEsgtka','esgESG')" style="background-image: url('logo esg.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
             </div>
-            <div id="esgESG" class="menu1 main1">
-                <div id="btnesgGesEsg" class="btnMenu1 btnsret" onclick="abrir_imagem('btnesgGesEsg',1,'PAINEL ESG-EMBRAER KPI.jpg','PAINEL ESG-EMBRAER KPI.jpg')" >KPI'S ESG</div>
-                <div id="esgEsgE" class="btnMenu1 btnsret" onclick="abrir_imagem('esgEsgE',1,'PAINEL ESG-EMBRAER E.jpg','PAINEL ESG-EMBRAER E.jpg')">ENVIRONMETAL</div>
-                <div id="esgEsgS" class="btnMenu1 btnsret" onclick="abrir_imagem('esgEsgS',2,'PAINEL ESG-EMBRAER S1.jpg','PAINEL ESG-EMBRAER S2.jpg')">SOCIAL</div>
-                <div id="esgEsgG" class="btnMenu1 btnsret" onclick="abrir_imagem('esgEsgG',1,'PAINEL ESG-EMBRAER G.jpg','PAINEL ESG-EMBRAER G.jpg')">GOVERNANCE</div>
-            </div>
+            <div id="btnEsg" class="btnMenu0 btnslogo" onclick="btn_menu('esgESG','MERCEDEZ','OLAM','btnEsg');btn_mudar_logo('btnEsg','EMBRAER')" style="background-image: url('logo esg.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
         </div>
+
+        <div id="esgESG" class ="Empresas">
+            <div class ="menu1 main">
+                <div id="btnEsgEmb" class="btnMenu1 btnslogo" onclick="btn_menu1_1('EsgEmb','menu2','btnEsgEmb');btn_mudar_logo('btnEsgEmb','EsgEmb')" style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;height: 14%;" ></div>
+                <div id="btnEsgMer" class="btnMenu1 btnslogo"  style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;height: 14%;" ></div>
+                <div id="btnEsgOla" class="btnMenu1 btnslogo"  style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;height: 14%;" ></div>
+                <div id="btnEsgGer" class="btnMenu1 btnslogo"  style="background-image: url('logo gerdau.png');background-size: contain;background-repeat: no-repeat;height: 14%;" ></div>
+                <div id="btnEsgRai" class="btnMenu1 btnslogo"  style="background-image: url('logo raizen.png');background-size: contain;background-repeat: no-repeat;height: 14%;" ></div>
+                <div id="btnEsgSed" class="btnMenu1 btnslogo"  style="background-image: url('logo esg tka.png');background-size: contain;background-repeat: no-repeat;height: 14%;" ></div>
+            </div>
+            <div id="EsgEmb" class="menu2 main2">
+                <div id="btnEsgGesEmb" class="btnMenu2 btnsret" onclick="abrir_imagem('btnEsgGesEmb',1,'PAINEL ESG-EMBRAER KPI.jpg','PAINEL ESG-EMBRAER KPI.jpg')" >KPI'S ESG</div>
+                <div id="EsgEmbE" class="btnMenu2 btnsret" onclick="abrir_imagem('EsgEmbE',1,'PAINEL ESG-EMBRAER E.jpg','PAINEL ESG-EMBRAER E.jpg')">ENVIRONMETAL</div>
+                <div id="EsgEmbS" class="btnMenu2 btnsret" onclick="abrir_imagem('EsgEmbS',2,'PAINEL ESG-EMBRAER S1.jpg','PAINEL ESG-EMBRAER S2.jpg')">SOCIAL</div>
+                <div id="EsgEmbG" class="btnMenu2 btnsret" onclick="abrir_imagem('EsgEmbG',1,'PAINEL ESG-EMBRAER G.jpg','PAINEL ESG-EMBRAER G.jpg')">GOVERNANCE</div>
+            </div>
+
+        </div>
+        
     </div>
         
     <div id="imgsDinamicas">
@@ -129,7 +142,8 @@
     <iframe id="tela"style="display: none" width="45%" height="52%" src="" frameborder="0" allowFullScreen="true"></iframe>
     <div id="telaInicial">
         <div id="MenuBotoesIniciais">
-            <div id="bt1" class="botoesIniciais" onclick="abrirTela('tksScreen')" style="background-image: url('tksShadow.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="bt2" class="botoesIniciais"onclick="abrirTela('tkaScreen')" style="background-image: url('logoTKA.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="bt1" class="botoesIniciais" onclick="abrirTela('tksScreen')" style="background-image: url('tksShadow.png');background-size: contain;background-repeat: no-repeat;background-position: center;margin-top: 10%;"></div>
             <div class="botoesIniciais" style="background-image: url('tkeShadow.png');background-size: contain;background-repeat: no-repeat;"></div>
         </div>
         
