@@ -471,7 +471,7 @@ function zerar(){
     }
     //cores
     let btns = document.getElementsByClassName('btnsret');
-    for(let i = 0;i<btnsLogo;i++){
+    for(let i = 0;i<btns.length;i++){
         btns[i].style.backgroundColor = "#015941";
         btns[i].color = "aliceblue";
     }
