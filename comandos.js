@@ -476,8 +476,13 @@ function zerar(){
         btns[i].color = "aliceblue";
     }
 
-
+    //ocultando imags
+    document.getElementById('tela').style.display = 'none';
+    document.getElementById('imgsDinamicas').style.display = 'none';
 
     //mostrando a tela inicial
     document.getElementById('telaInicial').style.display = "flex";
+
+
+
 }
