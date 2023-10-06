@@ -484,5 +484,8 @@ function zerar(){
     document.getElementById('telaInicial').style.display = "flex";
 
 
+    //voltando slide
+    temporizador = setInterval(function(){tela_incial_iframes()},15000);
+
 
 }
