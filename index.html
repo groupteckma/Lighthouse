@@ -19,13 +19,13 @@
         
         <div class="menu0 main">
             
-            <div class="btnMenu0 btnslogo btnsVoltar" onclick="voltar_ao_menu_incial('tksScreen')" >
+            <div class="btnMenu0 btnslogo btnsVoltar" onclick="zerar()">
                 <img class="imgBtnVolta"src="btnVoltar.png">
                 <div >VOLTAR</div>
             </div>
-            <div id="btnEmb" class="btnMenu0 btnslogo" onclick="btn_menu('EMBRAER','MERCEDEZ','OLAM','btnEmb');btn_mudar_logo('btnEmb','EMBRAER')" style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
-            <div id="btnMer" class="btnMenu0 btnslogo" onclick="btn_menu('MERCEDEZ','EMBRAER','OLAM','btnMer');btn_mudar_logo('btnMer','MERCEDEZ')" style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
-            <div id="btnOlan" class="btnMenu0 btnslogo" onclick="btn_menu('OLAM','EMBRAER','MERCEDEZ','btnOlan');btn_mudar_logo('btnOlan','OLAN')" style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+            <div id="btnEmb" class="btnMenu0 btnslogo" onclick="first('btnEmb','EMBRAER');btn_mudar_logo('btnEmb','EMBRAER')" style="background-image: url('logo embraer.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnMer" class="btnMenu0 btnslogo" onclick="first('btnMer','MERCEDEZ');btn_mudar_logo('btnMer','MERCEDEZ')" style="background-image: url('logo mercedez.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div id="btnOlan" class="btnMenu0 btnslogo" onclick="first('btnOlan','OLAM');btn_mudar_logo('btnOlan','OLAN')" style="background-image: url('logo olam.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
         </div>
         <div id="EMBRAER" class="Empresas">
                 <div class="menu1 main">
@@ -35,6 +35,7 @@
                     <div id="btnEmbFin" class="btnMenu1 btnslogo" style="background-image: url('logo emb_financeiro.png');background-size: contain;background-repeat: no-repeat;"></div>
                     <div id="btnEmbEsg" class="btnMenu1 btnslogo" onclick="btn_menu1_1('embESG','menu2','btnEmbEsg');btn_mudar_logo('btnEmbEsg','embESG')" style="background-image: url('logo esg.png');background-size: contain;background-position: center;background-repeat: no-repeat;"></div>
                 </div>
+                
 
 
                 <div id="embSeguranca" class="menu2 main2">
@@ -107,11 +108,11 @@
         
         <div class="menu0 main">
             
-            <div class="btnMenu0 btnslogo btnsVoltar" onclick="voltar_ao_menu_incial('tkaScreen')" >
+            <div class="btnMenu0 btnslogo btnsVoltar" onclick="zerar()" >
                 <img class="imgBtnVolta"src="btnVoltar.png">
                 <div >VOLTAR</div>
             </div>
-            <div id="btnEsg" class="btnMenu0 btnslogo" onclick="btn_menu('esgESG','MERCEDEZ','OLAM','btnEsg');btn_mudar_logo('btnEsg','EMBRAER')" style="background-image: url('logo esg.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+            <div id="btnEsg" class="btnMenu0 btnslogo" onclick="first('btnEsg','esgESG');btn_mudar_logo('btnEsg','esgESG')" style="background-image: url('logo esg.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
         </div>
 
         <div id="esgESG" class ="Empresas">

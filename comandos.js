@@ -167,6 +167,10 @@ function ocultar_afrente(botao){
         }
         
    }
+   document.getElementById('tela').style.display = 'none';
+   document.getElementById('imgsDinamicas').style.display = 'none';
+   
+
 
 }
 
@@ -291,6 +295,7 @@ function voltar_ao_menu_incial(empresa){
     
 }
 function abrir_imagem(botao,qtd,link,link2){
+    ocultar_afrente(botao);
     let imgs = document.getElementById('imgsDinamicas')
     imgs.style.display = "block";
     
@@ -342,7 +347,7 @@ function abrir_imagem(botao,qtd,link,link2){
     }
     let design = document.getElementById(botao);
     let olds = document.getElementsByClassName(design.classList[0]);
-    ocultar_afrente(botao);
+    
     for(i = 0; i < olds.length;i++){
         olds[i].style.backgroundColor = "#015941";
         olds[i].style.color = "aliceblue";
@@ -408,3 +413,71 @@ document.onkeydown = function(e) {
     }
   
   }
+function first(botao,empresa){
+    ocultar_afrente(botao);
+    let listaEmpresas = document.getElementsByClassName('Empresas');
+    for(let i=0;i<listaEmpresas.length;i++){
+        if(listaEmpresas[i].id === empresa){
+
+        }else{
+        listaEmpresas[i].style.display = "none";
+        }
+    }
+    if (document.getElementById(empresa).style.display === "flex"){
+        document.getElementById(empresa).style.display = "none";
+    }else{document.getElementById(empresa).style.display = "flex";}
+
+    listaMenu2 = document.getElementsByClassName('menu1');
+    for(let i =0;i<listaMenu2.length;i++){listaMenu2[i].style.display = "block";}
+    
+    
+}
+function zerar(){
+    
+    //zerando menus
+    for (let i = 1;i < 4;i++){
+        let nameMenu = `menu${i}`;
+        let listaMenu = document.getElementsByClassName(nameMenu);
+        
+        for (let j = 0;j<listaMenu.length;j++){
+            listaMenu[j].style.display = "none";
+        }
+    }
+    
+   //zerando empresas
+    let listaEmpresas = document.getElementsByClassName('Empresas');
+    for(let i=0;i<listaEmpresas.length;i++){
+        listaEmpresas[i].style.display = "none";
+    }
+    let listaMenuEmpresas = document.getElementsByClassName('menuEmpresas');
+    for(let i=0;i<listaMenuEmpresas.length;i++){
+        listaMenuEmpresas[i].style.display = "none";
+    }
+    
+    //logos
+    let btnsLogo = document.getElementsByClassName('btnslogo');
+    for(let i = 0;i<btnsLogo.length;i++){
+        
+        let nameImagem =btnsLogo[i].style.backgroundImage;
+        nameImagem = nameImagem.replace('url(','');
+        nameImagem = nameImagem.replace(')','');
+        nameImagem = nameImagem.replace(' alternativo','');
+
+        btnsLogo[i].style.backgroundImage = 'url('+nameImagem+')';
+        
+
+        btnsLogo[i].style.backgroundColor = "#015941";
+        btnsLogo[i].color = "aliceblue";
+    }
+    //cores
+    let btns = document.getElementsByClassName('btnsret');
+    for(let i = 0;i<btnsLogo;i++){
+        btns[i].style.backgroundColor = "#015941";
+        btns[i].color = "aliceblue";
+    }
+
+
+
+    //mostrando a tela inicial
+    document.getElementById('telaInicial').style.display = "flex";
+}
