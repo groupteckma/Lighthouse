@@ -187,11 +187,11 @@
     </div>
    
     <iframe id="tela"style="display: none" width="45%" height="52%" src="" frameborder="0" allowFullScreen="true"></iframe>
-    <div id="telaInicial">
+    <div id="telaInicial" style="display: none;">
         <div id="MenuBotoesIniciais">
             <div id="bt2" class="botoesIniciais"onclick="abrirTela('tkaScreen')" style="background-image: url('logoTKA.png');background-size: contain;background-repeat: no-repeat;"></div>
             <div id="bt1" class="botoesIniciais" onclick="abrirTela('tksScreen')" style="background-image: url('tksShadow.png');background-size: contain;background-repeat: no-repeat;background-position: center;margin-top: 10%;"></div>
-            <div class="botoesIniciais" style="background-image: url('tkeShadow.png');background-size: contain;background-repeat: no-repeat;"></div>
+            <div class="botoesIniciais"  style="background-image: url('tkeShadow.png');background-size: contain;background-repeat: no-repeat;"></div>
         </div>
         
         <iframe id="slide1" class="slide" style="display: block;" src="https://app.powerbi.com/view?r=eyJrIjoiYzNmZTU5MWEtZDEzNi00ODlmLTkxNjQtOTM0ZDI3M2VmMzM1IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0"></iframe>
@@ -199,9 +199,28 @@
         <iframe id="slide3" class="slide" style="display: none;" src="https://app.powerbi.com/view?r=eyJrIjoiMTMyMzg0NDUtOGZlMC00NmMzLTgzYjMtZmRiOTZjZGJiNDc4IiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0"></iframe>
         <div id="sumiu"   class="btnslogo" style="background-image: url(telaCheia.png);background-size: contain;background-repeat: no-repeat;max-width: 5%;margin-left: 1%;max-height: 8%;background-position: center;"  onclick="tela_cheia_slide()"></div>
     
+    </div>  
+
+    <div id="login">
+        <div class="container">
+            <p style=" font-family: Arial, Helvetica, sans-serif;font-size:xxx-large;color: aliceblue;">Login</p>
+        </div>
+        <div>
+            <p class="txt-login mgn-login">Usuário:</p>
+            <input id="username" class="input-login mgn-login">
+        </div>
+        <div>
+            <p class="txt-login mgn-login">Senha:</p>
+            <input type="password" id="password" class="input-login mgn-login">
+        </div>
+        <div class="container-top">
+            <button class="btn-login" onclick="logar()">Entrar</button>
+        </div>
     </div>
 
 
     <script type="text/javascript" src="comandos.js"></script>
+    <script type="text/javascript" src="consolidando.js"></script>
+
 </body>
 </html>

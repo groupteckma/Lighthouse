@@ -389,6 +389,8 @@ function tela_cheia_slide(){
     tela.style.width = "100%";
     tela.style.height = "100%";
     tela.style.margin = "0%";
+
+    alert("Tecle 'ESC' para sair do modo tela cheia");
     
 
     

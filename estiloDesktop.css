@@ -212,3 +212,67 @@ body {
 #bt2 {
     margin-left: 9%;
 }
+#login {
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 33%;
+    height: 60%;
+    width: 33%;
+    display: grid;
+    grid-template-rows: 3fr 2fr 2fr 2fr;
+    background-color: rgba(1,89,65,0.85);
+    
+}
+.txt-login {
+    color: aliceblue;
+}
+.input-login {
+    height: 30%;
+    background-color: aliceblue;
+    color: black;
+    
+    width: 70%;
+}
+.mgn-login {
+    margin-left: 15%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+.container-top{
+    display: flex;
+    align-items:start;
+    justify-content: center ;
+}
+.btn-login{
+    height: 35%;
+    width: 70%;
+    background-color: black;
+    color: aliceblue;
+    box-shadow: 2px 2px 2px gray;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-row-start: initial;
+    font-size: medium;
+}
+/*.btn-login{
+    height: 35%;
+    width: 70%;
+    background-color: rgba(1,89,65,0);
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    grid-row-start: initial;
+}*/
+/*.btn-login{
+    height: 35%;
+    width: 32%;
+    background-color: rgba(1,89,65,0);
+    color: black;
+    border: 2px solid black;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    grid-row-start: initial;
+}*/
